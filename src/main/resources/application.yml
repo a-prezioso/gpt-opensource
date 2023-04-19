@@ -1,0 +1,35 @@
+
+# application.yml
+chatgpt:
+  api-key: ${API_KEY}
+  api-url: https://api.openai.com/v1/chat/completions
+
+# application.yml
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+gpt:
+  model: gpt-3.5-turbo
+
+
+# application.yml
+server:
+  servlet:
+    context-path: /
